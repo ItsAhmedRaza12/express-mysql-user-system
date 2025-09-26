@@ -1,0 +1,266 @@
+/* styles.css - Professional and Eye-Catching Design for User Management App */
+
+/* Import a modern font for professionalism */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Subtle gradient for depth */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Headings - Eye-catching with color accents */
+h1, h2 {
+    color: #00224D; /* Navy blue for professionalism */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    letter-spacing: 0.5px;
+}
+
+/* Forms - Modern, clean, and advanced styling */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Elevated card effect */
+    border: 1px solid #e9ecef;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Smooth transitions for advanced feel */
+    background-color: #fafafa;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FF204E; /* Bright accent on focus */
+    box-shadow: 0 0 0 3px rgba(255, 32, 78, 0.1); /* Glow effect */
+    background-color: white;
+    transform: translateY(-2px); /* Subtle lift on focus */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* Buttons - Eye-catching with gradients and hover effects */
+button,
+input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #FF204E 0%, #A0153E 100%); /* Gradient using primary colors */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 32, 78, 0.3); /* Shadow for depth */
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #A0153E 0%, #5D0E41 100%); /* Shift to darker tones on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(255, 32, 78, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px); /* Press effect */
+}
+
+/* Specific button for home page - Make it prominent */
+button:not(form button) { /* Targets standalone buttons like "Join us!" */
+    display: inline-block;
+    width: auto;
+    padding: 15px 30px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Links - Professional styling with hover */
+.link-container {
+  text-align: center; /* centers the inline-block anchor */
+  margin-bottom: 20px;
+}
+
+a {
+     display: block;            /* full-width block element */
+    width: fit-content;        /* shrink to text width */
+    margin: 15px auto;         
+    color: #FF204E;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #A0153E;
+    text-decoration: underline;
+}
+
+/* Table Styles - Advanced, responsive table with modern look */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Card-like elevation */
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th {
+    background: linear-gradient(135deg, #00224D 0%, #5D0E41 100%); /* Dark gradient for header */
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Alternating rows for readability */
+}
+
+tr:hover {
+    background-color: rgba(255, 32, 78, 0.05); /* Subtle hover tint with accent color */
+    transform: scale(1.01); /* Slight zoom for interactivity */
+    transition: all 0.2s ease;
+}
+
+/* Form buttons inside table - Compact and styled */
+td form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    width: auto;
+}
+
+td button {
+    width: auto;
+    padding: 8px 15px;
+    margin: 0 5px;
+    background: linear-gradient(135deg, #5D0E41 0%, #A0153E 100%); /* Different gradient for actions */
+    font-size: 14px;
+    min-width: 80px;
+}
+
+td button:hover {
+    background: linear-gradient(135deg, #A0153E 0%, #FF204E 100%);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design - Advanced media queries for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr {
+        border: 1px solid #e9ecef;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: right;
+    }
+    
+    td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 500;
+        color: #00224D;
+    }
+    
+    /* Add data-labels via JS or assume structure; for simplicity, target by content if needed */
+    
+    button, input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Additional Polish - Loading/animation placeholders if needed */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body > * {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Ensure placeholders are styled */
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Users</title>
+    <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <style>
+    table,tr,td{border: 1px solid black;}
+  </style>
+  <body>
+    <div class="link-container">
+  <a href="/user/new">Create a new user</a>
+</div>
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <%for(let i=0;i<user.length;i++){%>
+    <tr>
+        <td><%=user[i].id %></td>
+        <td><%=user[i].email %></td>
+        <td><%=user[i].username %></td>
+        <td>
+        <form action="/user/<%=user[i].id %>/edit" method="get">
+            <button>Edit</button>
+        </form>
+    </td>    
+    <td>
+    <form action="/user/<%=user[i].id%>?_method=DELETE" method="post">
+        <button>Delete</button>
+    </form>
+    </td>
+    </tr>
+<% } %>
+    </table>
+  </body>
+</html>
+
